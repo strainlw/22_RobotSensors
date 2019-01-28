@@ -3,15 +3,15 @@ This module lets you practice the use of robot sensors.
 
 Authors: David Mutchler, Vibha Alangar, Matt Boutell, Dave Fisher,
          Mark Hays, Amanda Stouder, Aaron Wilkin, their colleagues,
-         and PUT_YOUR_NAME_HERE.
-"""  # TODO: 1. PUT YOUR NAME IN THE ABOVE LINE.
+         and Loki.
+"""  # DONE: 1. PUT YOUR NAME IN THE ABOVE LINE.
 
 import ev3dev.ev3 as ev3
 import time
 import math
 
 # -----------------------------------------------------------------------------
-# TODO 2:  With your instructor, do quiz questions 1 through 5.
+# DONE 2:  With your instructor, do quiz questions 1 through 5.
 #          After you understand the answers to those questions,
 #          mark this _TODO_ as DONE.
 # -----------------------------------------------------------------------------
@@ -43,7 +43,7 @@ def run_test_beep_and_tone():
        -- tone method of the ToneMaker class
     """
     # -------------------------------------------------------------------------
-    # TODO: 4.  Implement and test this method.
+    # DONE: 4.  Implement and test this method.
     # -------------------------------------------------------------------------
     # IMPORTANT:
     #   For testing the   beep   method,
@@ -57,6 +57,18 @@ def run_test_beep_and_tone():
     #   in increments of 10, with 50 millisecond durations.
     #   Do not forget to apply the   wait   method to tone, as usual.
     # -------------------------------------------------------------------------
+    b = Beeper()
+    for k in range(3):
+
+        b.beep().wait()
+
+    t = ToneMaker()
+    for k in range(3):
+        t.tone(150+k*10, 300).wait()
+
+
+
+
 
 
 # -----------------------------------------------------------------------------
@@ -355,7 +367,14 @@ class DriveSystem(object):
         self.go_straight_for_seconds(seconds, speed)
 
     def go_straight_for_inches_using_sensor(self, inches, speed):
-        pass
+
+        self.left_motor.reset_position()
+        while True:
+            self.go(speed,speed)
+            if (self.left_motor.get_position()**2/360**2)*1.3 >= inches:
+                self.stop()
+                break
+
         # Live code this with students
 
     def go_straight_until_black(self, speed):
