@@ -17,7 +17,7 @@ import math
 # -----------------------------------------------------------------------------
 
 # -----------------------------------------------------------------------------
-# TODO 3:  With your instructor, do quiz questions 6 through XXX.
+# DONE 3:  With your instructor, do quiz questions 6 through XXX.
 #          After you understand the answers to those questions,
 #          mark this _TODO_ as DONE.
 # -----------------------------------------------------------------------------
@@ -108,7 +108,7 @@ def run_test_go_straight_for_seconds():
     beeper.beep()
     drive_system.go_straight_for_seconds(2.5, -50)
     # -------------------------------------------------------------------------
-    # TODO: 6.  Run the above tests.  Be sure to understand the
+    # DONE: 6.  Run the above tests.  Be sure to understand the
     #              go_straight_for_seconds   method of   DriveSystem.
     # -------------------------------------------------------------------------
 
@@ -143,13 +143,13 @@ def run_test_go_straight_for_inches_using_time():
     beeper.beep()
     drive_system.go_straight_for_inches_using_time(12, -50)
     # -------------------------------------------------------------------------
-    # TODO: 7.  Run the above tests.  Be sure to understand the
+    # DONE: 7.  Run the above tests.  Be sure to understand the
     #              go_straight_for_inches_using_time   method of   DriveSystem.
     # -------------------------------------------------------------------------
 
 
 # -----------------------------------------------------------------------------
-# TODO 8:  With your instructor, do quiz questions XXX through XXX.
+# DONE 8:  With your instructor, do quiz questions XXX through XXX.
 #          After you understand the answers to those questions,
 #          mark this _TODO_ as DONE.
 # -----------------------------------------------------------------------------
@@ -185,14 +185,14 @@ def run_test_go_straight_for_inches_using_sensor():
     drive_system.go_straight_for_inches_using_sensor(12, -50)
 
     # -------------------------------------------------------------------------
-    # TODO: 9.  With your instructor, implement the
+    # DONE: 9.  With your instructor, implement the
     #      go_straight_for_inches_using_sensor    method of   DriveSystem.
     #      The tests are already written for you -- READ THEM (above).
     # -------------------------------------------------------------------------
 
 
 # -----------------------------------------------------------------------------
-# TODO 10:  With your instructor, do quiz questions XXX through XXX.
+# DONE 10:  With your instructor, do quiz questions XXX through XXX.
 #          After you understand the answers to those questions,
 #          mark this _TODO_ as DONE.
 # -----------------------------------------------------------------------------
